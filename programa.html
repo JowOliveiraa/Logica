@@ -1,13 +1,21 @@
 <meta charset="utf-8">
 
 <script>
+ 
+ function pulaLinha() {
+    document.write("<br><br>");   
+ }
 
-    document.writeln("A idade do Flavio é 40");
-    document.write("<br>");
-    document.writeln("A minha idade é 28");
-    document.write("<br>");
-    document.write("A idade do João é 30");
-    document.write("<br>");
+ function mostra( conteudo ) {
+    return document.write( conteudo );
+ }
+
+    mostra("A idade do flavio é 40");  
+    pulaLinha();
+    mostra("A minha idade é 28");
+    pulaLinha();
+    mostra("A idade do João é 30");
+    pulaLinha();
     
     var idadeFlavio = 40;
     var minhaIdade = 28;
@@ -15,6 +23,6 @@
 
     var media = ( idadeFlavio + minhaIdade + idadeJoao )/3;
    
-    document.write("A media das idades é " + Math.round(media));
+    mostra("A media das idades é " + Math.round(media));
 
 </script>
