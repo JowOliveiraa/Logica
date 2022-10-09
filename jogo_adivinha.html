@@ -1,0 +1,26 @@
+<meta charset="utf-8">
+
+<script>
+
+function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra( conteudo ) {
+        document.write( conteudo );
+    }
+
+    var numeroPensado = parseInt( Math.random()*10 );
+    var chute = parseInt( prompt("Tente adivinhar qual é o número que o Math.random escolheu de 0 a 10") );
+
+    if ( numeroPensado == chute ) {
+        mostra("Você acertou!");
+        pulaLinha();
+        mostra("O número escolhido foi : " + numeroPensado );
+    }else {
+        mostra("Você errou!");
+        pulaLinha();
+        mostra("O número escolhido foi: " + numeroPensado);
+    }
+
+</script>
