@@ -10,6 +10,20 @@
         document.write( conteudo );
     }
 
-    for
+    var numeroEscolhido = parseInt( Math.random() * 2 );
+
+    for ( var tentativas = 1; tentativas <= 3; tentativas++ ) {
+        var chute = parseInt( prompt("Chute de 0 a 10 o número que o Math.random escolheu") );
+
+        if ( chute == numeroEscolhido ) {
+            mostra("Parabens! você acertou!");
+            pulaLinha();
+            tentativas += 4;
+        } else{
+            chute = parseInt( prompt("Você errou! tente novamente!") );
+        }
+    }
+
+    mostra("O número escolhido foi: " + numeroEscolhido );
 
 </script>

@@ -10,17 +10,26 @@
         document.write( conteudo );
     }
 
-    var numeroPensado = parseInt( Math.random()*10 );
-    var chute = parseInt( prompt("Tente adivinhar qual é o número que o Math.random escolheu de 0 a 10") );
+    var numeroEscolhido = parseInt( Math.random()*10 );
+    var tentativas = 0;
+    var maximoTentativas = 3;
+    
+    while ( tentativas < maximoTentativas ) {
+        var chute = parseInt( prompt("Chute de 0 a 10 o número que o math.random escolheu:") );
 
-    if ( numeroPensado == chute ) {
-        mostra("Você acertou!");
-        pulaLinha();
-        mostra("O número escolhido foi : " + numeroPensado );
-    }else {
-        mostra("Você errou!");
-        pulaLinha();
-        mostra("O número escolhido foi: " + numeroPensado);
+        if ( chute == numeroEscolhido ) {
+            mostra("Parabéns! você acertou!");
+            pulaLinha();
+            tentativas = maximoTentativas; 
+            //Ou break;
+        } else{
+            tentativas += 1;
+            alert("Você errou!");
+            pulaLinha();
+            
+        }
     }
+        mostra("O número escolhido foi: " + numeroEscolhido );
+   
 
 </script>
